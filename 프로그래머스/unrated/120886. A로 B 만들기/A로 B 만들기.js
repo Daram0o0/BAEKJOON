@@ -1,5 +1,4 @@
 function solution(before, after) {
-    var answer = 0;
     var arrB = Array(26).fill(0);
     var arrA = Array(26).fill(0);
     
