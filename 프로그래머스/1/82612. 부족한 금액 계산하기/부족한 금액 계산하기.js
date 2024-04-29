@@ -1,8 +1,8 @@
 function solution(price, money, count) {
-    var sum = 0;
-    for(let i = 1; i<=count; i++){
-        sum += price * i;
-    }
+    var answer = 0;
 
-    return sum - money > 0 ? sum - money : 0;
+    for(let i = 1; i<=count; i++){
+        answer += price*i
+    }
+    return money>=answer ? 0 : answer -money;
 }
