@@ -1,10 +1,11 @@
 function solution(arr)
 {
-    var answer = [];
-
-    arr.forEach((val,idx) => {
-        if(arr[idx - 1] !== arr[idx]) answer.push(val);
+    const myArr = []
+    arr.forEach((val,idx)=>{
+        if(idx ===0)myArr.push(val)
+        else{
+            if(myArr[myArr.length-1]!==val) myArr.push(val)
+        }
     })
-    
-    return answer;
+    return myArr
 }
