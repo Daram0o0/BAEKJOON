@@ -1,18 +1,15 @@
 N = int(input())
 
-load = list(map(int,input().split()))
+road = list(map(int,input().split()))
 oil = list(map(int,input().split()))[0:N-1]
 
-MIN = min(oil)
 answer = 0
-total_load = sum(load)
+cheap_oil = max(oil)
 
-for i in range(len(load)):
-  if oil[i] == MIN:
-    answer += MIN * total_load
-    break
-  else:
-    answer += oil[i] * load[i]
-    total_load -= load[i]
+for i in range(len(road)):
+  if cheap_oil > oil[i]:
+    cheap_oil = oil[i]
+  
+  answer += cheap_oil * road[i]
 
 print(answer)
